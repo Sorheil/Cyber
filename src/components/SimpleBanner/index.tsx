@@ -12,7 +12,6 @@ import macbook from "./../../assets/Products-banner/macBook-pro-14.png"
  */
 
 export default function SimpleBanner() {
-    const srcImg = `src/assets/products-banner/`
 
     return (
         <section className="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-2">
