@@ -1,10 +1,8 @@
 import { useState } from "react";
 import Icon from "../Icon";
-/**TODO
- * CHANGER L'APPARENCE DES BOUTONS L'ORSQUE LE PRODUIT EST CLIQUE (DOIT ETRE PLEINEMENT REMPLI)
- */
 
-function ProductCard({ image, title, price }:{ image: string, title: string, price: string }) {
+
+function ProductCard({ image, title, price }: { image: string, title: string, price: string }) {
     const [liked, setLiked] = useState(false);
 
     // Fonction pour basculer l'état de "like"
@@ -17,11 +15,10 @@ function ProductCard({ image, title, price }:{ image: string, title: string, pri
             {/* Like Icon */}
             <div
                 onClick={toggleLike}
-                className={`cursor-pointer absolute top-2 right-2 md:top-4 md:right-4 ${
-                    liked ? "text-red-500" : "text-gray-400"
-                }`}
+                className={`cursor-pointer absolute top-2 right-2 md:top-4 md:right-4 ${liked ? "text-red-500" : "text-gray-400"
+                    }`}
             >
-                <Icon name="heart" size={40}  />
+                {liked ? (<Icon name="heartFilled" size={40} />) : (<Icon name="heart" size={40} />)}
             </div>
 
             {/* Image du produit */}

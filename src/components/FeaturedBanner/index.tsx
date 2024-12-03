@@ -10,12 +10,12 @@ import ps5 from "./../../assets/Products-banner/playstation-5.png"
 import macbook from "./../../assets/Products-banner/macBook-pro-14.png"
 
 
-export default function SimpleBanner() {
+export default function FeaturedBanner() {
 
     return (
         <section className="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-2">
             {/* airpods */}
-            <div className="row-start-1 row-end-2 flex flex-col justify-center items-center py-10 px-4 bg-gray-200
+            <div className="row-start-1 row-end-2 flex flex-col justify-center items-center py-0 px-4 bg-gray-200
             md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-2  md:flex-row md:p-0 md:pr-7">
                 <img src={airpods} alt="apple-airpods-max" className="md:h-full md:w-auto md:relative md:transform md:-translate-x-1/2" />
                 <div className="text-center flex flex-col gap-3 md:text-left ">

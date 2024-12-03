@@ -3,12 +3,12 @@ import './../../App.css'
 // components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Banner from '../../components/Banner'
-import SimpleBanner from '../../components/SimpleBanner'
+import HeroBanner from '../../components/HeroBanner'
+import FeaturedBanner from '../../components/FeaturedBanner'
 import Categories from '../../components/Categories'
 import Products from '../../components/Products'
 import DiscountProducts from '../../components/DiscountProducts'
-import BannerSummer from '../../components/BannerSummer'
+import SummerBanner from '../../components/SummerBanner'
 import Carousel from '../../components/Caroussel'
 // images
 import airpods from "./../../assets/banner-product/orreillete.png"
@@ -46,15 +46,16 @@ export default function Home() {
     return (<>
         <Header />
         <main>
-            <Banner />
-            <SimpleBanner />
+            <HeroBanner />
+            <FeaturedBanner />
             <Categories />
             <Products />
+            {/* popular products */}
             <div className="w-full">
                 <Carousel slides={slides} />
             </div>
             <DiscountProducts />
-            <BannerSummer />
+            <SummerBanner />
         </main>
         <Footer />
     </>

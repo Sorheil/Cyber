@@ -3,7 +3,7 @@ import macbook from "./../../assets/banner-summer/macbook.png"
 import iphone from "./../../assets/banner-summer/iphone.png"
 import watch from "./../../assets/banner-summer/watch.png"
 import tablet from "./../../assets/banner-summer/phone.png"
-export default function BannerSummer() {
+export default function SummerBanner() {
     return (
         <>
             <section className="relative bg-black/80 flex flex-col justify-center items-center gap-5 py-32 px-4 overflow-hidden">

@@ -51,21 +51,50 @@ const products = [
     },
 ];
 
+
+/**
+ * Todo
+ * add fade in transitions in div for products
+ */
+
 import airpod from "./../../assets/Products-banner/apple-airpods-max.png"
 import ProductCard from "../ProductCard";
+import { useState } from "react";
 export default function Products() {
+    const [activeContent, setActiveContent] = useState<string>("New Arrival")
+
     return (
         <section className="py-14 px-4 md:py-16 md:px-40">
             {/* list of products */}
-            <div className="flex justify-between font-bold md:justify-start md:gap-5">
-                <h3 className="border-b-4 border-black">New Arrival</h3>
-                <h3 className="opacity-40">BestSeller</h3>
-                <h3 className="opacity-40">Featured Products</h3>
+            <div className="flex justify-between font-bold px-0 md:justify-start md:gap-5 ">
+                <button className={`${activeContent === "New Arrival" ? " border-b-4 border-black" : "opacity-40"}`} onClick={() => setActiveContent("New Arrival")}>New Arrival</button>
+                <button className={`${activeContent === "BestSeller" ? " border-b-4 border-black" : "opacity-40"}`} onClick={() => setActiveContent("BestSeller")}>BestSeller</button>
+                <button className={`${activeContent === "Featured Products" ? " border-b-4 border-black" : "opacity-40"}`} onClick={() => { setActiveContent("Featured Products") }}>Featured Products</button>
             </div>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 py-6 px-4 ">
-                {products.map((product, index) => (
+
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 py-6  ">
+                {activeContent === "New Arrival" && products.map((product, index) => (
+
                     <ProductCard
-                        key={index}
+                    key={`product1-${index}`}
+                        image={product.image}
+                        title={product.title}
+                        price={product.price}
+                    />
+                ))}
+
+                {activeContent === "BestSeller" && products.map((product, index) => (
+                    <ProductCard
+                        key={`product2-${index}`}
+                        image={product.image}
+                        title={product.title}
+                        price={product.price}
+                    />
+                ))}
+
+                {activeContent === "Featured Products" && products.map((product, index) => (
+                    <ProductCard
+                    key={`product3-${index}`}
                         image={product.image}
                         title={product.title}
                         price={product.price}
