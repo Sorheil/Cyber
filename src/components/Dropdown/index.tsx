@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function Dropdown({ label, children }: { label: string, children: React.ReactNode }) {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleDropdown = (e) => {
+    const toggleDropdown = (e: React.MouseEvent) => {
         e.preventDefault();
         setIsOpen(!isOpen);
     };
