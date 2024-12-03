@@ -44,7 +44,6 @@ const slides = [
 export default function Home() {
 
     return (<>
-        <Header />
         <main>
             <HeroBanner />
             <FeaturedBanner />
@@ -57,7 +56,6 @@ export default function Home() {
             <DiscountProducts />
             <SummerBanner />
         </main>
-        <Footer />
     </>
     )
 }

@@ -1,4 +1,5 @@
 import iphoneImage from '../../assets/image-product-home/Iphone.png'
+import { Link } from 'react-router-dom'
 export default function HeroBanner() {
     return (
         <header className="flex flex-col items-center gap-12 pt-20 px-4 bg-[#211C24] md:flex-row md:justify-between md:pt-32 md:px-32 ">
@@ -7,7 +8,7 @@ export default function HeroBanner() {
                 <p className='text-2xl text-white/50'>Pro.Beyond.</p>
                 <h2 className='text-center'><span className='text-6xl text-white/80 font-extralight'>Iphone 14</span> <br className='md:hidden' /><span className='text-6xl text-white font-semibold'>Pro</span></h2>
                 <p className='text-center text-lg text-white/50'>created to change everything for the better.For everypone</p>
-                <button className='mt-5 text-lg text-white font-semibold border border-white/50 py-2 px-4'>Shop Now</button>
+                <Link to="product/iphone" className='mt-5 text-lg text-white font-semibold border border-white/50 py-2 px-4'>Shop Now</Link>
             </div>
 
             <div className=''>
